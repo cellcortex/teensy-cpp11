@@ -47,11 +47,3 @@ void loop()
     serial << str << std::endl;
     delay(1000);  // do not print too fast!
 }
-
-
-
-extern "C"{
-int _getpid(){ return -1;}
-int _kill(int pid, int sig){ return -1; }
-int _write_r() { return -1; }
-}

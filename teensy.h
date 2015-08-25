@@ -11,6 +11,12 @@ typedef basic_iserialstream<char> iserial;
 typedef basic_oserialstream<char> oserial;
 
 
+// External declaration so STL doesn't bork
+extern "C" {
+   int _getpid(){ return -1;}
+   int _kill(int pid, int sig){ return -1; }
+   int _write_r() { return -1; }
+}
 
 #endif
 
