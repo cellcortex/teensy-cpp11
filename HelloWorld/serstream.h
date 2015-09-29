@@ -1,5 +1,4 @@
-#ifndef __SERSTREAM_H
-#define __SERSTREAM_H
+#pragma once
 
 #include <ios>
 #include <istream>
@@ -265,7 +264,4 @@ public:
 private:
     basic_serialbuf<charT, traits, Tserial> sb;
 };
-
-
-#endif
 

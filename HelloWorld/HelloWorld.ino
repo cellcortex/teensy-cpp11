@@ -11,23 +11,20 @@
 
    This example code is in the public domain.
  */
+#include "Arduino.h"
 
+#include <iterator>
 #include <vector>
 #include <string>
+
+#include <ios>
+#include <istream>
+#include <ostream>
+#include <iostream>
+#include <streambuf>
+
+#include "serstream.h"
 #include "teensy.h"
-
-#include <Wire.h>
-#include <Adafruit_Sensor.h>
-#include <Adafruit_LSM303_U.h>
-#include <Adafruit_BMP085_U.h>
-#include <Adafruit_10DOF.h>
-
-/* Assign a unique ID to the sensors */
-Adafruit_10DOF                dof   = Adafruit_10DOF();
-Adafruit_LSM303_Accel_Unified accel = Adafruit_LSM303_Accel_Unified(30301);
-Adafruit_LSM303_Mag_Unified   mag   = Adafruit_LSM303_Mag_Unified(30302);
-Adafruit_BMP085_Unified       bmp   = Adafruit_BMP085_Unified(18001);
-
 
 void setup()
 {
@@ -41,7 +38,7 @@ void loop()
     std::string str;
     char c;
 
-    for(c='A';c<='Z';c++)
+    for(c='A'; c<='Z'; c++)
         str+=c;
 
     serial << str << std::endl;

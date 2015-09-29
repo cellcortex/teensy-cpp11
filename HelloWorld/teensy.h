@@ -1,5 +1,4 @@
-#ifndef __TEENSY_H
-#define __TEENSY_H
+#pragma once
 
 #include "serstream.h"
 
@@ -17,6 +16,4 @@ extern "C" {
    int _kill(int pid, int sig){ return -1; }
    int _write_r() { return -1; }
 }
-
-#endif
 
