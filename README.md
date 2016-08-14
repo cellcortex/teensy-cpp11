@@ -12,7 +12,7 @@ edit the boards.txt (or the platform.txt) file. For me this was in
 
     teensy31.build.flags.cpp=-fno-exceptions -felide-constructors -std=gnu++11 -fno-rtti
 
-    teensy31.build.flags.libs=-larm_cortexM4l_math -lm -lstdc++
+    teensy31.build.flags.libs=-lstdc++ -larm_cortexM4l_math -lm
 
 
 
